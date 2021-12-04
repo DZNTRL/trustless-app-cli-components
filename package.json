@@ -1,7 +1,7 @@
 {
   "name": "pro-web-app-cli-components",
-  "version": "1.0.3",
-  "main": "index.js",
+  "version": "1.0.4",
+  "main": "dist/js/App.js",
   "repository": "git@github.com:jbotw-proweb/pro-web-app-cli-components.git",
   "author": "joshuaebowling <joshuaebowling@gmail.com>",
   "license": "MIT",
