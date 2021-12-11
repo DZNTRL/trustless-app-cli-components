@@ -1,14 +1,20 @@
 {
   "name": "pro-web-app-cli-components",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "dist/js/App.js",
   "repository": "git@github.com:jbotw-proweb/pro-web-app-cli-components.git",
-  "author": "joshuaebowling <joshuaebowling@gmail.com>",
+  "author": "josh bowling: Session Messenger<0589f966e710b940904b19fea0ccd3cd1342086f15d69aa7adac8ce6d9abcf7b7a>",
   "license": "MIT",
   "scripts": {
-    "build": "yarn run tsc",
+    "build": "rm -rf dist/js/ && yarn run tsc --skipLibCheck",
     "publisha": "npm version patch -f && npm publish --registry http://localhost:4873 --force",
-    "bp": "npm run build && npm run publisha"
+    "bp": "npm run build && npm run publisha",
+    "test": "rm -rf dist/js/__tests__ && npx tsc --skipLibCheck --p .test.tsconfig.json && npx jest"
+  },
+  "jest": {
+    "testMatch": [
+      "/home/josh/Documents/workspace/pro-web/pro-web-app-cli-components/dist/__tests__/components/CheckUsername/CheckUsername.spec.js"
+    ]
   },
   "dependencies": {
     "pro-web-app-cli-api-service": "^1.0.9",
@@ -19,5 +25,10 @@
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
     "typescript": "^4.5.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.0",
+    "@testing-library/react": "^12.1.2",
+    "jest": "^27.4.3"
   }
 }
