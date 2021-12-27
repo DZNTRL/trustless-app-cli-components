@@ -1,6 +1,6 @@
 {
   "name": "pro-web-app-cli-components",
-  "version": "1.0.29",
+  "version": "1.0.30",
   "main": "dist/js/App.js",
   "repository": "git@github.com:jbotw-proweb/pro-web-app-cli-components.git",
   "author": "josh bowling: Session Messenger<0589f966e710b940904b19fea0ccd3cd1342086f15d69aa7adac8ce6d9abcf7b7a>",
@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "pro-web-app-cli-api-service": "^1.0.10",
-    "pro-web-app-cli-state-manager": "^1.0.18",
+    "pro-web-app-cli-state-manager": "^1.0.20",
     "pro-web-common": "^1.0.17",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.3",
