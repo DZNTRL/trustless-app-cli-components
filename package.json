@@ -1,6 +1,6 @@
 {
   "name": "pro-web-app-cli-components",
-  "version": "1.0.77",
+  "version": "1.0.78",
   "main": "dist/js/App.js",
   "repository": "git@github.com:jbotw-proweb/pro-web-app-cli-components.git",
   "author": "josh bowling: Session Messenger<0589f966e710b940904b19fea0ccd3cd1342086f15d69aa7adac8ce6d9abcf7b7a>",
