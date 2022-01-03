@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState, useEffect } from "react"
 import { Form, Button } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
 import { StateManager } from "pro-web-app-cli-state-manager"
@@ -10,19 +10,24 @@ import CheckUsername from "../../components/CheckUsername/CheckUsername"
 const Component: React.FunctionComponent = () => {
     const dispatch = useDispatch()
     const userSvc = useContext(UserServiceContext)
+    const [validated, setValidated] = useState<boolean>(false)
     const { username, publicKey } = useSelector((state: IAllState) => ({
-        username: state.User.username,
+        username: state.User.createUsername,
         publicKey: state.User.createUserPublicKey
     }))
     const handleSubmit = (e) => {
         e.preventDefault()
         dispatch(StateManager.actions.user(userSvc).createUser(username, publicKey))
     }
+    useEffect(() => {
+        console.log("username", username, "publickey", publicKey)
+        setValidated(username !== null && publicKey !== null)
+    }, [username, publicKey])
 
-    return <Form onSubmit={handleSubmit}>
+    return <Form noValidate validated={validated} onSubmit={handleSubmit}>
     <CheckUsername />
     <PublicKey />
-    <Button type="submit">Create</Button>
+    <Button disabled={!validated} type="submit">Create</Button>
     </Form>    
 }
 

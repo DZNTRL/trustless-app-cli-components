@@ -4,7 +4,7 @@ import { StateManager } from "pro-web-app-cli-state-manager"
 import { UserServiceContext } from "./contexts/userService"
 import { Services } from "pro-web-app-cli-api-service"
 import { BaseUrl} from "./contexts/baseUrl"
-import Notification from "./components/notification/Notification"
+import Notification from "./components/Notification/Notification"
 
 const App:React.FunctionComponent = (props) => {
     return <BaseUrl.Provider value="">

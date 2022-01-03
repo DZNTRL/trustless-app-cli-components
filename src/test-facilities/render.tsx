@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import { UserServiceContext } from "../contexts/userService"
 import { User } from "pro-web-common/dist/js/stubs/api-service/UserServiceStub"
 import { BaseUrl} from "../contexts/baseUrl"
-import Notification from "../components/notification/Notification"
+import Notification from "../components/Notification/Notification"
 
 const AllTheProviders: React.FunctionComponent = ({children}) => {
   return <BaseUrl.Provider value="">

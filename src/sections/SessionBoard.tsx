@@ -1,14 +1,15 @@
-import React, { useState } from "react"
+import React from "react"
+import UserInfo from "../components/User/UserInfo"
+import Logout from "../components/GettingIn/Logout"
+import Redirect from "../components/Shared/Redirect"
+import { useSelector } from "react-redux"
+import { IAllState } from "../IAllState"
+import { LoadingStates } from "pro-web-common/dist/js/enums/state-manager/LoadingStates"
 
 const SessionBoard: React.FunctionComponent = () => {
-    const [clicked, setClicked] = useState<number>(0)
-    const onClick = () => { 
-        setClicked(clicked + 1)
-    }
     return <>
-        <button onClick={onClick}>
-            Click
-        </button>
+        <Logout />
+        <UserInfo />
     </>
 }
 
